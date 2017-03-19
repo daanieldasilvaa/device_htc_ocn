@@ -58,10 +58,12 @@ ro.bluetooth.sap=true
 ro.bt.ble_tag=1
 
 # Camera
+persist.camera.HAL3.enabled=1
 persist.ts.rtmakeup=false
 vidc.enc.dcvs.extra-buff-count=2
 persist.camera.antibanding=60
 persist.camera.tuning_spec=htc
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.htc.camera2,org.lineageos.snap
 
 # CNE
 persist.cne.feature=1
