@@ -348,7 +348,6 @@ PRODUCT_PACKAGES += \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
-    qcrilhook \
     telephony-ext
 
 # RenderScript HAL
