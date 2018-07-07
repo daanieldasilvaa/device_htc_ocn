@@ -144,9 +144,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     libqomx_core \
     libmmjpeg_interface \
-    libmmcamera_interface \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    libmmcamera_interface
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
