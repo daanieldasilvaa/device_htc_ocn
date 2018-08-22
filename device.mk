@@ -403,7 +403,11 @@ PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-service \
     vr.msm8998
 
-# VNDK-SP:
+# VNDK
+PRODUCT_PACKAGES += \
+    vndk_package
+
+# VNDK-SP
 PRODUCT_PACKAGES += \
     vndk-sp
 
