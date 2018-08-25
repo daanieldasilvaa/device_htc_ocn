@@ -1,0 +1,1 @@
+allow hal_gatekeeper_default tee_listener_prop:file r_file_perms;
