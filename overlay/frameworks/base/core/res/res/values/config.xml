@@ -317,4 +317,11 @@
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
+
+    <!-- Buttons variable backlight brightness -->
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
+
+    <!-- Set default buttons backlight brightness-->
+    <integer name="config_buttonBrightnessSettingDefault">3</integer>
+
 </resources>
