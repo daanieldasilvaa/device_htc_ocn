@@ -321,4 +321,7 @@
     <!-- Button backlight -->
     <bool name="config_deviceHasVariableButtonBrightness">true</bool>
 
+    <!-- Set default buttons backlight brightness-->
+    <integer name="config_buttonBrightnessSettingDefault">1</integer>
+
 </resources>
