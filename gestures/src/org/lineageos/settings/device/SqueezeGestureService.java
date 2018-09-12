@@ -324,10 +324,12 @@ public class SqueezeGestureService extends Service implements SensorEventListene
 
     private void launchCamera() {
         mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
+        mPowerManager.wakeUp(SystemClock.uptimeMillis(), GESTURE_WAKEUP_REASON);
         final Intent intent = new Intent(lineageos.content.Intent.ACTION_SCREEN_CAMERA_GESTURE);
         mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT,
                 Manifest.permission.STATUS_BAR_SERVICE);
         doHapticFeedback();
+        mGestureWakeLock.release();
     }
 
     private void launchBrowser() {
@@ -337,6 +339,7 @@ public class SqueezeGestureService extends Service implements SensorEventListene
                 new Intent(Intent.ACTION_VIEW, Uri.parse("http:")));
         startActivitySafely(intent);
         doHapticFeedback();
+        mGestureWakeLock.release();
     }
 
     private void launchDialer() {
@@ -345,6 +348,7 @@ public class SqueezeGestureService extends Service implements SensorEventListene
         final Intent intent = new Intent(Intent.ACTION_DIAL, null);
         startActivitySafely(intent);
         doHapticFeedback();
+        mGestureWakeLock.release();
     }
 
     private void launchEmail() {
@@ -354,6 +358,7 @@ public class SqueezeGestureService extends Service implements SensorEventListene
                 new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:")));
         startActivitySafely(intent);
         doHapticFeedback();
+        mGestureWakeLock.release();
     }
 
     private void launchMessages() {
@@ -367,20 +372,22 @@ public class SqueezeGestureService extends Service implements SensorEventListene
             startActivitySafely(intent);
             doHapticFeedback();
         }
+        mGestureWakeLock.release();
     }
 
     private void toggleFlashlight() {
+        mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
         String rearCameraId = getRearCameraId();
         if (rearCameraId != null) {
-            mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
             try {
                 mCameraManager.setTorchMode(rearCameraId, !mTorchEnabled);
                 mTorchEnabled = !mTorchEnabled;
             } catch (CameraAccessException e) {
-                // Ignore
+		mGestureWakeLock.release();
             }
-            doHapticFeedback();
+        doHapticFeedback();
         }
+        mGestureWakeLock.release();
     }
 
     private void playPauseMusic() {
@@ -408,6 +415,7 @@ public class SqueezeGestureService extends Service implements SensorEventListene
         mGestureWakeLock.acquire(GESTURE_WAKELOCK_DURATION);
         mAudioManager.adjustStreamVolume(AudioManager.STREAM_MUSIC, AudioManager.ADJUST_RAISE, 0);
         doHapticFeedback();
+        mGestureWakeLock.release();
     }
 
     private void dispatchMediaKeyWithWakeLockToMediaSession(final int keycode) {
