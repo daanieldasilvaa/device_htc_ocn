@@ -96,7 +96,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     ro.opengles.version=196610 \
-    ro.product.display_resolution = 5.5 inch WQHD resolution \
     ro.sf.lcd_density=640 \
     vendor.display.disable_rotator_downscale=1 \
     vendor.display.perf_hint_window=50 \
@@ -141,7 +140,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.core_ctl_min_cpu=2 \
     ro.core_ctl_max_cpu=4 \
     ro.sys.fw.bg_apps_limit=60 \
-    ro.vendor.at_library=libqti-at.so \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.qti.config.zram=true
 
@@ -167,7 +165,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.mux_count=8 \
     persist.data.df.ul_mode=5 \
     persist.data.wda.enable=true \
-    persist.rmnet.data.enable=true \
+    persist.rmnet.data.enable=true
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
