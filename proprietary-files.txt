@@ -1174,7 +1174,7 @@ vendor/bin/imsqmidaemon
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsrcsd
--app/ims/ims.apk|2e78bcabe64ed1a988f8550ec78fdbc9ee7704be
+-app/ims/ims.apk|76c1af800e52cd0c72f81d8ddd6815878181b953
 vendor/framework/qti-vzw-ims-internal.jar
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-imsrcs-v2.so
@@ -1266,6 +1266,9 @@ vendor/firmware/slpi_v2.b13
 vendor/firmware/slpi_v2.b14
 vendor/firmware/slpi_v2.cfg
 vendor/firmware/slpi_v2.mdt
+
+# Hotword Enrollment
+-priv-app/GoogleHotwordEnrollment/GoogleHotwordEnrollment.apk;PRESIGNED
 
 # Thermal
 vendor/etc/thermal-engine.conf
