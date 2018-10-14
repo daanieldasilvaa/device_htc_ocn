@@ -1174,7 +1174,7 @@ vendor/bin/imsqmidaemon
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsrcsd
--app/ims/ims.apk|47efe93dca2d93aba73785ee3cf3c9e5e04fcee9
+-app/ims/ims.apk|ea0be581e0265764b7b9611ef126b824427cc26b
 vendor/framework/qti-vzw-ims-internal.jar
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-imsrcs-v2.so
