@@ -207,6 +207,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.delta_time.enable=true \
     persist.timed.enable=true
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2018-06-01
+
 # VoLTE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.ims_volte_enable=1 \
