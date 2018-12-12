@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/slim_ocn.mk
+    $(LOCAL_DIR)/lineage_ocn.mk
